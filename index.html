@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>quiz cultura</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script type="text/javascript">
+        alert("Salve Signor Utente, per superare il suo esame di ammissione dovrà rispondere correttamente a queste domande, buona fortuna")
+        let punto = 0
+        let risposta = prompt("Qual è la capitale del Giappone?")
+        while (risposta === null){
+            prompt("Qual è la capitale del Giappone?")
+        }
+        if (risposta.toLowerCase() === "tokyo"){
+            punto = punto+1
+        }
+
+        let risposta2 = prompt("Qual è il pianeta più grande del sistema solare?")
+        while (risposta2 === null){
+            prompt("Qual è il pianeta più grande del sistema solare?")
+        }
+        if (risposta2.toLowerCase() === "giove"){
+            punto = punto+1
+        }
+
+        let risposta3 = prompt("Chi ha dipinto la Gioconda?")
+        while (risposta3 === null){
+            prompt("Chi ha dipinto la Gioconda?")
+        }
+        if (risposta3.toLowerCase() === "leonardo da vinci"){
+            punto = punto+1
+        }
+
+        let risposta4 = prompt("Quale è la lingua ufficiale del Brasile?")
+        while (risposta4 === null){
+            prompt("Quale è la lingua ufficiale del Brasile?")
+        }
+        if (risposta4.toLowerCase() === "portoghese"){
+            punto = punto+1
+        }
+
+        let risposta5= prompt("Chi ha scritto la Divina Commedia?")
+        while (risposta5 === null){
+            prompt("Chi ha scritto la Divina Commedia?")
+        }
+        if (risposta5.toLowerCase() === "dante alighieri"){
+            punto = punto+1
+        }
+
+        if(punto>3){
+            alert("Bravo utente, hai superato l'esame totalizzando "+punto+" punti")
+        }
+        if(punto<3){
+            alert("Mi dispiace Utente, non hai superato l'esame scritto, riprovi la prosssima volta")
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
