@@ -14,9 +14,29 @@
 
 
     <script type="text/javascript">
+
+        function sanitize(aaa){
+            
+            aaa= aaa.trim().toLowerCase()
+            return aaa
+
+        }
+        
+        function calcolopercentuale(bbb){
+            bbb = (bbb * 100) / 5
+            return bbb
+
+
+        }
+
+
+
+
+
         alert("Salve Signor Utente, per superare il suo esame di ammissione dovrà rispondere correttamente a queste domande, buona fortuna")
         let punto = 0
         let risposta = prompt("Qual è la capitale del Giappone?")
+        risposta=sanitize(risposta)
         while (risposta === null){
             prompt("Qual è la capitale del Giappone?")
         }
@@ -25,6 +45,7 @@
         }
 
         let risposta2 = prompt("Qual è il pianeta più grande del sistema solare?")
+        risposta2=sanitize(risposta2)
         while (risposta2 === null){
             prompt("Qual è il pianeta più grande del sistema solare?")
         }
@@ -33,6 +54,7 @@
         }
 
         let risposta3 = prompt("Chi ha dipinto la Gioconda?")
+        risposta3=sanitize(risposta3)
         while (risposta3 === null){
             prompt("Chi ha dipinto la Gioconda?")
         }
@@ -41,6 +63,7 @@
         }
 
         let risposta4 = prompt("Quale è la lingua ufficiale del Brasile?")
+        risposta4=sanitize(risposta4)
         while (risposta4 === null){
             prompt("Quale è la lingua ufficiale del Brasile?")
         }
@@ -49,20 +72,24 @@
         }
 
         let risposta5= prompt("Chi ha scritto la Divina Commedia?")
+        risposta5=sanitize(risposta5)
         while (risposta5 === null){
             prompt("Chi ha scritto la Divina Commedia?")
         }
         if (risposta5.toLowerCase() === "dante alighieri"){
-            punto = punto+1
-        }
+            punto = punto+1 
+        } 
 
         if(punto>3){
-            alert("Bravo utente, hai superato l'esame totalizzando "+punto+" punti")
-        }
-        if(punto<3){
-            alert("Mi dispiace Utente, non hai superato l'esame scritto, riprovi la prosssima volta")
+            alert("Bravo utente, hai superato l'esame totalizzando "+punto+"/5 con una percentuale di " + calcolopercentuale(punto)+"%")
+            
 
         }
+        if(punto<=3){
+            alert("Mi dispiace Utente, non hai superato l'esame scritto, hai totalizzato "+punto+"/5 con una percentuale di"+calcolopercentuale(punto)+"%")
+
+        }
+
 
 
 
